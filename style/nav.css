@@ -1,0 +1,8 @@
+nav {
+  height: 80px;
+  font-size: var(--font-2xl);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

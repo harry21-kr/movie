@@ -1,0 +1,55 @@
+section > h3 {
+  font-size: var(--font-2xl);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+section > div {
+  background-color: var(--secondary-color);
+  padding: 24px;
+  border-radius: 12px;
+  height: 370px;
+}
+
+#top-rated-movie-wrap {
+  display: flex;
+  overflow-x: scroll;
+  gap: 24px;
+}
+
+#popular-movie-wrap {
+  display: flex;
+  overflow-x: scroll;
+  gap: 24px;
+}
+
+#upcoming-movie-wrap {
+  display: flex;
+  overflow-x: scroll;
+  gap: 24px;
+}
+
+.movie-content-wrap {
+  line-height: 1.5;
+}
+
+.movie-content-wrap > img {
+  width: 200px;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.movie-content-wrap > h4 {
+  font-size: var(--font-lg);
+  white-space: nowrap;
+  width: 200px;
+  overflow-x: scroll;
+}
+
+.movie-vote-average-text {
+  font-size: var(--font-sm);
+}
+
+.movie-release-date-text {
+  font-size: var(--font-sm);
+}
