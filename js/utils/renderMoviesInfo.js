@@ -14,7 +14,7 @@ export function renderMoviesInfo(data) {
 
     const voteAverageTag = document.createElement("p");
     voteAverageTag.classList.add("movie-vote-average-text");
-    voteAverageTag.textContent = movie.vote_average;
+    voteAverageTag.textContent = `평점: ${movie.vote_average.toFixed(1)}점`;
 
     const posterTag = document.createElement("img");
     posterTag.src = `${TMDB_IMAGE_URL}${movie.poster_path}`;
@@ -22,7 +22,7 @@ export function renderMoviesInfo(data) {
     const releaseDateTag = document.createElement("p");
     const formatReleaseDate = movie.release_date.replace(/-/gi, ".");
     releaseDateTag.classList.add("movie-release-date-text");
-    releaseDateTag.textContent = formatReleaseDate;
+    releaseDateTag.textContent = `개봉 일자: ${formatReleaseDate}`;
 
     divTag.appendChild(posterTag);
     divTag.appendChild(titleTag);
