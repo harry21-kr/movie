@@ -3,7 +3,7 @@ import { options } from "../config/themovie.js";
 
 export const getTopRatedMovies = async (page = 1) => {
   const res = await fetch(
-    `${TMDB_API_URL}/top_rated?language=ko-KR&page=${page}`,
+    `${TMDB_API_URL}/movie/top_rated?language=ko-KR&page=${page}`,
     options
   )
     .then((res) => res.json())

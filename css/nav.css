@@ -1,8 +1,16 @@
 nav {
   height: 80px;
-  font-size: var(--font-2xl);
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+nav > div {
+  max-width: 1224px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-2xl);
 }

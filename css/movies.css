@@ -29,6 +29,12 @@ section > div {
   gap: 24px;
 }
 
+#searched-movie-wrap {
+  display: flex;
+  overflow-x: scroll;
+  gap: 24px;
+}
+
 .movie-content-wrap {
   line-height: 1.5;
 }
