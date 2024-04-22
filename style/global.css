@@ -24,4 +24,5 @@ body > div {
   /* Color */
   --primary-color: #1f2a37;
   --secondary-color: rgb(56 66 80);
+  --third-color: rgb(28, 29, 31);
 }

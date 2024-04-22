@@ -132,3 +132,8 @@ body {
 ::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
