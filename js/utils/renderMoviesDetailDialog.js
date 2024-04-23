@@ -26,6 +26,9 @@ export function renderMoviesDetailDialog(data) {
   const posterTag = document.createElement("img");
   posterTag.classList.add("movie-detail-dialog-img");
   posterTag.src = `https://image.tmdb.org/t/p/original/${data.backdrop_path}`;
+  posterTag.setAttribute("loading", "lazy");
+  posterTag.setAttribute("width", 800);
+  posterTag.setAttribute("height", 450);
 
   const releaseDateTag = document.createElement("p");
   const formatReleaseDate = data.release_date.replace(/-/gi, ".");
