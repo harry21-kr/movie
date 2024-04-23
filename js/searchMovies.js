@@ -23,6 +23,8 @@ function renderSearchedResult(data) {
     oldSection.remove();
   }
 
+  const query = document.getElementById("search-movie-input").value;
+
   const searchedMovieElements = renderMoviesInfo(data);
 
   const adId = document.getElementById("ad-banner");
@@ -32,7 +34,7 @@ function renderSearchedResult(data) {
 
   searchedSection.id = "searched-movie-section";
   searchedDiv.id = "searched-movie-wrap";
-  searchedH3.innerText = "검색 결과";
+  searchedH3.innerText = data.length ? "검색 결과" : "검색 결과가 없습니다.";
   searchedSection.appendChild(searchedH3);
   searchedSection.appendChild(searchedDiv);
 
