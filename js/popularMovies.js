@@ -1,7 +1,7 @@
-import { getPopularMovies } from "./get/getPopularMovies.js";
+import { getMovieData } from "./get/getMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
 
-const popularMovies = await getPopularMovies();
+const { popularMovies } = await getMovieData();
 
 const popularMoviesContainer = document.getElementById("popular-movie-wrap");
 

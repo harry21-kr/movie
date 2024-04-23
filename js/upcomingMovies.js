@@ -1,7 +1,7 @@
-import { getUpcomingMovies } from "./get/getUpcomingMovies.js";
+import { getMovieData } from "./get/getMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
 
-const upcomingMovies = await getUpcomingMovies();
+const { upcomingMovies } = await getMovieData();
 
 const upcomingMoviesContainer = document.getElementById("upcoming-movie-wrap");
 

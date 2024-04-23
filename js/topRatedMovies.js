@@ -1,7 +1,7 @@
-import { getTopRatedMovies } from "./get/getTopRatedMovies.js";
+import { getMovieData } from "./get/getMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
 
-const topRatedMovies = await getTopRatedMovies();
+const { topRatedMovies } = await getMovieData();
 
 const topMoviesContainer = document.getElementById("top-rated-movie-wrap");
 

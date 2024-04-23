@@ -1,11 +1,13 @@
-import { getSearchMovies } from "./get/getSearchMovies.js";
+import { getMovieData } from "./get/getMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
+
+const { getSearchedMovies } = await getMovieData();
 
 document
   .getElementById("search-movie-button")
   .addEventListener("click", async () => {
     const query = document.getElementById("search-movie-input").value;
-    const data = await getSearchMovies(query);
+    const data = await getSearchedMovies(1, query);
     renderSearchedResult(data);
   });
 
@@ -13,7 +15,7 @@ document
   .getElementById("search-movie-input")
   .addEventListener("change", async (e) => {
     const query = e.target.value;
-    const data = await getSearchMovies(query);
+    const data = await getSearchedMovies(1, query);
     renderSearchedResult(data);
   });
 
