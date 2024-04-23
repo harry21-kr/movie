@@ -23,8 +23,6 @@ function renderSearchedResult(data) {
     oldSection.remove();
   }
 
-  const query = document.getElementById("search-movie-input").value;
-
   const searchedMovieElements = renderMoviesInfo(data);
 
   const adId = document.getElementById("ad-banner");

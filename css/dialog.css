@@ -1,0 +1,7 @@
+dialog {
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 20%);
+  backdrop-filter: blur(4px);
+}

@@ -37,6 +37,8 @@ section > div {
 
 .movie-content-wrap {
   line-height: 1.5;
+  position: relative;
+  cursor: pointer;
 }
 
 .movie-content-wrap > img {
@@ -58,4 +60,17 @@ section > div {
 
 .movie-release-date-text {
   font-size: var(--font-sm);
+}
+
+.movie-rank-text {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 2px 2px 4px 2px;
+  top: 12px;
+  left: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: var(--font-xl);
+  background-color: var(--secondary-color);
 }
