@@ -1,6 +1,7 @@
 body {
   background-color: var(--primary-color);
   color: white;
+  word-break: keep-all;
 }
 
 body > div {
