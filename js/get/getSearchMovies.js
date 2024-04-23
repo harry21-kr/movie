@@ -1,6 +1,5 @@
 import { API_KEY } from "../../env.js";
 import { TMDB_API_URL } from "../config/constants/index.js";
-import { options } from "../config/themovie.js";
 
 export const getSearchMovies = async (query) => {
   const queryToUnicode = encodeURIComponent(query);

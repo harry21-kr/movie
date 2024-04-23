@@ -1,6 +1,5 @@
 import { API_KEY } from "../../env.js";
 import { TMDB_API_URL } from "../config/constants/index.js";
-import { options } from "../config/themovie.js";
 
 export const getPopularMovies = async (page = 1) => {
   const res = await fetch(
