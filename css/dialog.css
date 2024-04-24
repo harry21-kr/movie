@@ -1,12 +1,15 @@
 dialog {
   width: 800px;
-
-  background-color: var(--third-color);
-  border: none !important;
+  background: var(--third-color);
+  border: none;
   border-radius: 12px;
   box-shadow: 10px 10px 10px var(--third-color);
   color: white;
   padding: 24px;
+}
+
+dialog[open] {
+  animation: fadeInWithScale 0.2s;
 }
 
 dialog::backdrop {

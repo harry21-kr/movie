@@ -1,0 +1,13 @@
+@keyframes fadeInWithScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+    background: white;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    background: var(--third-color);
+  }
+}
