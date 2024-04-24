@@ -1,5 +1,3 @@
-import { TMDB_IMAGE_URL } from "../config/constants/index.js";
-
 export function renderMoviesDetailDialog(data) {
   const oldWrapTag = document.querySelector(".movie-detail-dialog-wrap");
 
