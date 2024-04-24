@@ -39,6 +39,11 @@ section > div {
   line-height: 1.5;
   position: relative;
   cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.movie-content-wrap:hover {
+  transform: scale(1.05);
 }
 
 .movie-content-wrap > img {
