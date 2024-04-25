@@ -1,10 +1,8 @@
 export async function get(url) {
   try {
-    const response = await fetch(url, { method: "GET" }).then((res) =>
-      res.json()
-    );
+    const response = (await fetch(url, { method: "GET" })).json();
     return response;
   } catch (err) {
-    throw new Error("check api request.");
+    console.error(err);
   }
 }
