@@ -6,7 +6,10 @@ export function renderMoviesInfo(data) {
     const divTag = document.createElement("div");
     divTag.setAttribute("id", `movie-item-${movie.id}`);
     divTag.classList.add("movie-content-wrap");
-    divTag.addEventListener("click", () => renderMoviesDetailDialog(movie));
+    divTag.addEventListener("click", () => {
+      renderMoviesDetailDialog(movie);
+      alert(movie.id);
+    });
 
     const titleTag = document.createElement("h4");
     titleTag.textContent = movie.title;
