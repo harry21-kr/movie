@@ -3,6 +3,6 @@ export async function get(url) {
     const response = (await fetch(url, { method: "GET" })).json();
     return response;
   } catch (err) {
-    console.error(err);
+    throw new Error(err);
   }
 }
