@@ -3,6 +3,8 @@ import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
 
 const { getSearchedMoviesData } = useMovieData();
 
+const inputTag = document.getElementById("search-movie-input");
+
 document
   .getElementById("search-movie-button")
   .addEventListener("click", async () => {
@@ -11,13 +13,13 @@ document
     renderSearchedResult(data);
   });
 
-document
-  .getElementById("search-movie-input")
-  .addEventListener("change", async (e) => {
-    const query = e.target.value;
-    const data = await getSearchedMoviesData(1, query);
-    renderSearchedResult(data);
-  });
+inputTag.focus();
+
+inputTag.addEventListener("change", async (e) => {
+  const query = e.target.value;
+  const data = await getSearchedMoviesData(1, query);
+  renderSearchedResult(data);
+});
 
 function renderSearchedResult(data) {
   const oldSection = document.getElementById("searched-movie-section");
