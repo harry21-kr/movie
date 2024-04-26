@@ -1,7 +1,7 @@
 import { API_KEY, TMDB_API_URL } from "../config/constants/index.js";
 import { get } from "../utils/index.js";
 
-export const getMovieData = async () => {
+export const useMovieData = () => {
   const getPopularMovies = async (page = 1) => {
     const res = await get(
       `${TMDB_API_URL}/movie/popular?language=ko-KR&page=${page}&api_key=${API_KEY}`
@@ -23,15 +23,18 @@ export const getMovieData = async () => {
     return res.results;
   };
 
-  const [popularMovies, topRatedMovies, upcomingMovies] = await Promise.all([
-    getPopularMovies(),
-    getTopRatedMovies(),
-    getUpcomingMovies(),
-  ]);
+  const getSearchedMoviesData = async (page = 1, query) => {
+    const queryToUnicode = encodeURIComponent(query);
+    const res = await get(
+      `${TMDB_API_URL}/search/movie?query=${queryToUnicode}&include_adult=false&language=ko-KR&page=${page}&api_key=${API_KEY}`
+    );
+    return res.results;
+  };
 
   return {
-    popularMovies,
-    topRatedMovies,
-    upcomingMovies,
+    getPopularMovies,
+    getTopRatedMovies,
+    getUpcomingMovies,
+    getSearchedMoviesData,
   };
 };

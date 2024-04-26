@@ -1,7 +1,9 @@
-import { getMovieData } from "./get/getMovieData.js";
+import { useMovieData } from "./hook/useMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
 
-const { upcomingMovies } = await getMovieData();
+const { getUpcomingMovies } = useMovieData();
+
+const upcomingMovies = await getUpcomingMovies();
 
 const upcomingMoviesContainer = document.getElementById("upcoming-movie-wrap");
 

@@ -1,5 +1,7 @@
-import { getSearchedMoviesData } from "./get/getSearchedMoviesData.js";
+import { useMovieData } from "./hook/useMovieData.js";
 import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
+
+const { getSearchedMoviesData } = useMovieData();
 
 document
   .getElementById("search-movie-button")
