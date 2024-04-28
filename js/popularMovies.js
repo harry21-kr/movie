@@ -1,5 +1,5 @@
 import { useMovieData } from "./hook/useMovieData.js";
-import { renderMoviesInfo } from "./utils/renderMoviesInfo.js";
+import { renderMoviesInfo } from "./components/renderMoviesInfo.js";
 
 const { getPopularMovies } = useMovieData();
 
