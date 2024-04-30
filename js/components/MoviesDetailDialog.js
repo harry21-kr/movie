@@ -1,4 +1,4 @@
-export function renderMoviesDetailDialog(data) {
+export default function MoviesDetailDialog(data) {
   const oldWrapTag = document.querySelector(".movie-detail-dialog-wrap");
 
   if (oldWrapTag) {

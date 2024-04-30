@@ -1,7 +1,7 @@
 import { API_KEY, TMDB_API_URL } from "../config/constants/index.js";
 import { get } from "../utils/index.js";
 
-export const useMovieData = () => {
+const useMovieData = () => {
   const getPopularMovies = async (page = 1) => {
     const res = await get(
       `${TMDB_API_URL}/movie/popular?language=ko-KR&page=${page}&api_key=${API_KEY}`
@@ -38,3 +38,5 @@ export const useMovieData = () => {
     getSearchedMoviesData,
   };
 };
+
+export default useMovieData;

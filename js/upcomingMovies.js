@@ -1,5 +1,6 @@
-import { useMovieData } from "./hook/useMovieData.js";
-import { renderMoviesInfo } from "./components/renderMoviesInfo.js";
+import useMovieData from "./hook/useMovieData.js";
+import MoviesInfo from "./components/MoviesInfo.js";
+import { addShowDialogEvent } from "./utils/index.js";
 
 const { getUpcomingMovies } = useMovieData();
 
@@ -7,8 +8,8 @@ const upcomingMovies = await getUpcomingMovies();
 
 const upcomingMoviesContainer = document.getElementById("upcoming-movie-wrap");
 
-const upcomingMoviesElements = renderMoviesInfo(upcomingMovies);
+const upcomingMoviesElements = MoviesInfo(upcomingMovies);
 
-upcomingMoviesElements.forEach((upcomingMoviesElement) => {
-  upcomingMoviesContainer.appendChild(upcomingMoviesElement);
-});
+upcomingMoviesContainer.innerHTML = upcomingMoviesElements;
+
+addShowDialogEvent(upcomingMovies);

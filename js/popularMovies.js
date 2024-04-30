@@ -1,5 +1,6 @@
-import { useMovieData } from "./hook/useMovieData.js";
-import { renderMoviesInfo } from "./components/renderMoviesInfo.js";
+import useMovieData from "./hook/useMovieData.js";
+import MoviesInfo from "./components/MoviesInfo.js";
+import { addShowDialogEvent } from "./utils/index.js";
 
 const { getPopularMovies } = useMovieData();
 
@@ -7,8 +8,8 @@ const popularMovies = await getPopularMovies();
 
 const popularMoviesContainer = document.getElementById("popular-movie-wrap");
 
-const popularMovieElements = renderMoviesInfo(popularMovies);
+const popularMovieElements = MoviesInfo(popularMovies);
 
-popularMovieElements.forEach((popularMovieElement) => {
-  popularMoviesContainer.appendChild(popularMovieElement);
-});
+popularMoviesContainer.innerHTML = popularMovieElements;
+
+addShowDialogEvent(popularMovies);
